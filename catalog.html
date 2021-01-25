@@ -7,40 +7,131 @@
   <body>
    <header>
      <nav>
-       <a><img src="img/index-logo.svg" width="100" height="100" alt="логотип Sedona"></a>
+       <a href="index.html"><img src="img/index-logo.svg" width="100" height="100" alt="логотип Sedona"></a>
        <ul>
-         <li><a href="#"> Информация</a></li>
-         <li><a href="#"> Фото и видео</a></li>
-         <li><a href="#"> Карта штата</a></li>
+         <li><a href="#">Информация</a></li>
+         <li><a href="#">Фото и видео</a></li>
+         <li><a href="#">Карта штата</a></li>
          <li><a href="catalog.html"> Гостиницы</a></li>
        </ul>
      </nav>
    </header>
    <main>
-      
-  </main>
-
-    <footer>
-  <p>
-    #VISITSEDONA <br>
-    ТЕЛ: +7(495) 666-01-66
-  </p>
+   </main>
+    <section>
+    <form method="GET" action="https://echo.htmlacademy.ru">
+    <fieldset>
+      <legend>ИНФРАСТРУКТУРА:</legend>
+      <ul>
+        <li>
+          <input type="checkbox" name="БАССЕЙН" id="filter_swimming-pool" checked>
+          <label for="filter_swimming-pool">БАССЕЙН</label>
+        </li>
+        <li>
+          <input type="checkbox" name="ПАРКОВКА" id="filter_parking">
+          <label for="filter_parking">ПАРКОВКА</label>
+        </li>
+        <li>
+          <input type="checkbox" name="WI-FI" id="filter_wi-fi">
+          <label for="filter_wi-fi">WI-FI</label>
+        </li>
+      </ul>
+    </fieldset>
+    <fieldset>
+      <legend>ТИП ЖИЛЬЯ:</legend>
+      <ul>
+        <li>
+          <input type="checkbox" name="ГОСТИНИЦА" id="filter_hotel" checked>
+          <label for="filter_hotel">ГОСТИНИЦА</label>
+        </li>
+        <li>
+          <input type="checkbox" name="МОТЕЛЬ" id="filter_motel" checked>
+          <label for="filter_motel">МОТЕЛЬ</label>
+        </li>
+        <li>
+          <input type="checkbox" name="АППАРТАМЕНТЫ" id="filter_appartaments" checked>
+          <label for="filter_appartaments">АППАРТАМЕНТЫ</label>
+        </li>
+      </ul>
+    </fieldset>
+    <fieldset>
+    <legend>СТОИМОСТЬ В СУТКИ(Р):</legend>
+    <div>
+      <input type="range" id="volume" name="volume"
+             min="0" max="3000">
+      <label for="volume">От 0 до 3000</label>
+    </div>
+      <button type="submit">Показать</button>
+   </fieldset>
+    </form>
+   </section>
+   <section>
+     <p>НАЙДЕНО:3</p>
+     <p>СОРТИРОВКА:</p>
+    <ul>
+      <li><a href="#">ПО ЦЕНЕ</a></li>
+      <li><a href="#">ПО ТИПУ</a></li>
+      <li><a href="#">ПО РЕЙТИНГУ</a></li> 
+    </ul>
+    <nav>
+      <a href="#" id="prev">Prev</a>
+      <a href="#" id="next">Next</a>
+    </nav>
+  </section>
   <section>
+    <div>
+      <img src="https://via.placeholder.com/135x90" alt="фото отеля AMARA RESORT & SPA">
+      <h2>AMARA RESORT & SPA</h2>
+       <p>ГОСТИНИЦА ОТ 4000 Р</p>
+       <button type="submit">Подробнее</button>
+       <button type="submit">Забронировать</button>
+       <p>РЕЙТИНГ: 8,5</p>
+       <img src="https://via.placeholder.com/18x17" alt="картинка звёздочки">
+       <img src="https://via.placeholder.com/18x17" alt="картинка звёздочки">
+       <img src="https://via.placeholder.com/18x17" alt="картинка звёздочки">
+       <img src="https://via.placeholder.com/18x17" alt="картинка звёздочки">
+    </div>
+    <div>
+      <img src="https://via.placeholder.com/135x90" alt="фото отеля DESERT QUAIL INN">    
+    <h2>DESERT QUAIL INN</h2>
+     <p>МОТЕЛЬ ОТ 3000 Р</p>
+     <button type="submit">Подробнее</button>
+     <button type="submit">Забронировать</button>
+     <p>РЕЙТИНГ: 8,9</p>
+     <img src="https://via.placeholder.com/18x17" alt="картинка звёздочки">
+     <img src="https://via.placeholder.com/18x17" alt="картинка звёздочки">
+     <img src="https://via.placeholder.com/18x17" alt="картинка звёздочки">
+    </div>
+   <div>
+    <img src="https://via.placeholder.com/135x90" alt="фото отеля VILLAS AT POCO DIABLO">    
+  <h2>VILLAS AT POCO DIABLO</h2>
+  <p>АППАРТАМЕНТЫ ОТ 2000 Р</p>
+  <button type="submit">Подробнее</button>
+  <button type="submit">Забронировать</button>
+  <p>РЕЙТИНГ: 9,2</p>
+  <img src="https://via.placeholder.com/18x17" alt="картинка звёздочки">
+  <img src="https://via.placeholder.com/18x17" alt="картинка звёздочки">
+  </div>
+   </section>
+       <footer>
+  <p>#VISITSEDONA</p>
+  <p><a href="tel:+7(495) 666-01-66">тел:+7(495) 666-01-66</a></p>
+  
     <ul>
       <li>
-        <a href="twitter.com"><img src="img/twitter-logo.svg" width="100" height="100" alt="логотип twitter"></a>
+        <a href="#"><img src="img/twitter-logo.svg" width="100" height="100" alt="twitter"></a>
       </li>
       <li>
-        <a href="facebook.com"><img src="img/facebook-logo.svg" width="100" height="100" alt="логотип facebook"></a>
+        <a href="#"><img src="img/facebook-logo.svg" width="100" height="100" alt="facebook"></a>
       </li>
       <li>
-        <a href="youtube.com"><img src="img/youtube-logo.svg" width="100" height="100" alt="логотип youtube"></a>
+        <a href="#"><img src="img/youtube-logo.svg" width="100" height="100" alt="youtube"></a>
       </li>
     </ul>
-  </section>
-  <img src="img/html.academy-logo.svg" width="100" height="100" alt="логотип HTML-ACADEMY">
+  
+  <img src="img/html.academy-logo.svg" width="100" height="100" alt="HTML-ACADEMY">
 </footer>
-
+<p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>
   </body>
 </html>
 
