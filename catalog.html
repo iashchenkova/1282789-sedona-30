@@ -1,128 +1,132 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Седона</title>
-    <link rel="icon" href="favicon.ico">
-    <link rel="icon" href="img/icon.svg" type="image/svg+xml">
-  </head>
-  <body>
-   <header>
-     <nav>
-       <a href="index.html"><img src="img/logo.svg" width="138" height="70" alt="логотип sedona"></a>
-       <ul>
-         <li><a href="#">Информация</a></li>
-         <li><a href="#">Фото и видео</a></li>
-         <li><a href="#">Карта штата</a></li>
-         <li><a href="catalog.html">Гостиницы</a></li>
-       </ul>
-     </nav>
-   </header>
-   <main>
+
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Седона</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/icon.svg" type="image/svg+xml">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a href="index.html"><img src="img/logo.svg" width="138" height="70" alt="логотип sedona"></a>
+      <ul>
+        <li><a href="#">Информация</a></li>
+        <li><a href="#">Фото и видео</a></li>
+        <li><a href="#">Карта штата</a></li>
+        <li><a href="catalog.html">Гостиницы</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
     <section>
-    <form method="GET" action="https://echo.htmlacademy.ru">
-    <fieldset>
-      <legend>ИНФРАСТРУКТУРА:</legend>
+      <form method="GET" action="https://echo.htmlacademy.ru">
+        <fieldset>
+          <legend>ИНФРАСТРУКТУРА:</legend>
+          <ul>
+            <li>
+              <input type="checkbox" name="options" value="filter_swimming-pool" checked>
+              <label for="filter_swimming-pool">БАССЕЙН</label>
+            </li>
+            <li>
+              <input type="checkbox" name="options" value="filter_parking">
+              <label for="filter_parking">ПАРКОВКА</label>
+            </li>
+            <li>
+              <input type="checkbox" name="options" value="filter_wi-fi">
+              <label for="filter_wi-fi">WI-FI</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset>
+          <legend>ТИП ЖИЛЬЯ:</legend>
+          <ul>
+            <li>
+              <input type="checkbox" name="options" value="filter_hotel" checked>
+              <label for="filter_hotel">ГОСТИНИЦА</label>
+            </li>
+            <li>
+              <input type="checkbox" name="options" value="filter_motel" checked>
+              <label for="filter_motel">МОТЕЛЬ</label>
+            </li>
+            <li>
+              <input type="checkbox" name="options" value="filter_appartaments" checked>
+              <label for="filter_appartaments">АППАРТАМЕНТЫ</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset>
+          <legend>СТОИМОСТЬ В СУТКИ(Р):</legend>
+          <input type="number" id="volume" min="0" max="3000" step="100">
+          <label for="volume">От 0 до 3000</label>
+          <button type="button">Показать</button>
+        </fieldset>
+      </form>
+    </section>
+    <section>
+      <p>НАЙДЕНО:3</p>
+      <p>СОРТИРОВКА:</p>
       <ul>
-        <li>
-          <input type="checkbox" name="options" value="filter_swimming-pool" checked>
-          <label for="filter_swimming-pool">БАССЕЙН</label>
-        </li>
-        <li>
-          <input type="checkbox" name="options" value="filter_parking">
-          <label for="filter_parking">ПАРКОВКА</label>
-        </li>
-        <li>
-          <input type="checkbox" name="options" value="filter_wi-fi">
-          <label for="filter_wi-fi">WI-FI</label>
-        </li>
+        <li><a href="#">ПО ЦЕНЕ</a></li>
+        <li><a href="#">ПО ТИПУ</a></li>
+        <li><a href="#">ПО РЕЙТИНГУ</a></li>
       </ul>
-    </fieldset>
-    <fieldset>
-      <legend>ТИП ЖИЛЬЯ:</legend>
       <ul>
-        <li>
-          <input type="checkbox" name="options" value="filter_hotel" checked>
-          <label for="filter_hotel">ГОСТИНИЦА</label>
-        </li>
-        <li>
-          <input type="checkbox" name="options" value="filter_motel" checked>
-          <label for="filter_motel">МОТЕЛЬ</label>
-        </li>
-        <li>
-          <input type="checkbox" name="options" value="filter_appartaments" checked>
-          <label for="filter_appartaments">АППАРТАМЕНТЫ</label>
-        </li>
+        <li><a href="#" id="prev">Prev</a></li>
+        <li><a href="#" id="next">Next</a></li>
       </ul>
-    </fieldset>
-    <fieldset>
-    <legend>СТОИМОСТЬ В СУТКИ(Р):</legend>
-      <input type="number" id="volume" min="0" max="3000" step="100">
-      <label for="volume">От 0 до 3000</label>    
-      <button type="button">Показать</button>
-   </fieldset>
-    </form>
-   </section>
-   <section>
-     <p>НАЙДЕНО:3</p>
-     <p>СОРТИРОВКА:</p>
-    <ul>
-      <li><a href="#">ПО ЦЕНЕ</a></li>
-      <li><a href="#">ПО ТИПУ</a></li>
-      <li><a href="#">ПО РЕЙТИНГУ</a></li> 
-    </ul>
-  <ul>
-    <li><a href="#" id="prev">Prev</a></li>
-    <li><a href="#" id="next">Next</a></li>
-  </ul>
-    
-  </section>
-  <section>
-    <article>
-      <img src="img/amara-resort-and-spa.jpg" width="135" height="90" alt="отель Amara Resort & Spa">
-      <h2>AMARA RESORT & SPA</h2>
-       <p>ГОСТИНИЦА ОТ 4000 Р</p>
-       <button type="submit">Подробнее</button>
-       <button type="submit">Забронировать</button>
-       <p>РЕЙТИНГ: 8,5</p>
-    </article>
-    <article>
-      <img src="img/desert-quail-inn.jpg" width="135" height="90" alt="отель Desert Quail Inn">    
-    <h2>DESERT QUAIL INN</h2>
-     <p>МОТЕЛЬ ОТ 3000 Р</p>
-     <button type="submit">Подробнее</button>
-     <button type="submit">Забронировать</button>
-     <p>РЕЙТИНГ: 8,9</p>
-    </article>
-   <article>
-    <img src="img/villas-at-poco-diablo.jpg" width="135" height="90" alt="отель Villas at Poco Diablo">    
-  <h2>VILLAS AT POCO DIABLO</h2>
-  <p>АППАРТАМЕНТЫ ОТ 2000 Р</p>
-  <button type="submit">Подробнее</button>
-  <button type="submit">Забронировать</button>
-  <p>РЕЙТИНГ: 9,2</p>
-   </article>
-   </section>
+
+    </section>
+    <section>
+      <article>
+        <img src="img/amara-resort-and-spa.jpg" width="135" height="90" alt="отель Amara Resort & Spa">
+        <h2>AMARA RESORT & SPA</h2>
+        <p>ГОСТИНИЦА ОТ 4000 Р</p>
+        <button type="submit">Подробнее</button>
+        <button type="submit">Забронировать</button>
+        <p>РЕЙТИНГ: 8,5</p>
+      </article>
+      <article>
+        <img src="img/desert-quail-inn.jpg" width="135" height="90" alt="отель Desert Quail Inn">
+        <h2>DESERT QUAIL INN</h2>
+        <p>МОТЕЛЬ ОТ 3000 Р</p>
+        <button type="submit">Подробнее</button>
+        <button type="submit">Забронировать</button>
+        <p>РЕЙТИНГ: 8,9</p>
+      </article>
+      <article>
+        <img src="img/villas-at-poco-diablo.jpg" width="135" height="90" alt="отель Villas at Poco Diablo">
+        <h2>VILLAS AT POCO DIABLO</h2>
+        <p>АППАРТАМЕНТЫ ОТ 2000 Р</p>
+        <button type="submit">Подробнее</button>
+        <button type="submit">Забронировать</button>
+        <p>РЕЙТИНГ: 9,2</p>
+      </article>
+    </section>
   </main>
-       <footer>
-  <p>#VISITSEDONA</p>
-  <p><a href="tel:+7(495) 666-01-66">тел:+7(495) 666-01-66</a></p>
-  
-  <ul>
-    <li>
-      <a href="#" target="blank"><img src="img/twitter.svg" width="46" height="48" alt="twitter"></a>
-    </li>
-    <li>
-      <a href="#" target="blank"><img src="img/facebook.svg" width="46" height="48" alt="facebook"></a>
-    </li>
-    <li>
-      <a href="#" target="blank"><img src="img/youtube.svg"width="46" height="48" alt="youtube"></a>
-    </li>
-  </ul>
+  <footer>
+    <p>#VISITSEDONA</p>
+    <p><a href="tel:+7(495) 666-01-66">тел:+7(495) 666-01-66</a></p>
 
-<img src="img/website-by-html-academy.svg" width="197" height="41" alt="HTML-ACADEMY">
-  
+    <ul>
+      <li>
+        <a href="#" target="blank"><img src="img/twitter.svg" width="46" height="48" alt="twitter"></a>
+      </li>
+      <li>
+        <a href="#" target="blank"><img src="img/facebook.svg" width="46" height="48" alt="facebook"></a>
+      </li>
+      <li>
+        <a href="#" target="blank"><img src="img/youtube.svg" width="46" height="48" alt="youtube"></a>
+      </li>
+    </ul>
+
+    <img src="img/website-by-html-academy.svg" width="197" height="41" alt="HTML-ACADEMY">
+
   </footer>
-  </body>
-</html>
+</body>
 
+</html>

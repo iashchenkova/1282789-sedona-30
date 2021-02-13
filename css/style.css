@@ -19,17 +19,17 @@
 /*Variables*/
 
 :root {
-    --basic-black: #000000; 
-    --basic-white:#FFFFFF;    ;
-    --basic-grey:#A9A9A9;
-    --basic-extralight-grey: #F2F2F2;
-    --basic-light-gray: #EEEEEE;
-    --basic-brown: #766357;
-    --basic-darker-brown: #604E43;
-    --basic-extradark-brown: #503E33;
-    --basic-blue: #81B3D2;
-    --basic-darker-blue:#669EC0;
-    --basic-extradark-blue:#5496BD;
+    --color-black: #000000; 
+    --color-white:#FFFFFF;
+    --color-grey:#A9A9A9;
+    --color-extralight-grey: #F2F2F2;
+    --color-light-gray: #EEEEEE;
+    --color-brown: #766357;
+    --color-darker-brown: #604E43;
+    --color-extradark-brown: #503E33;
+    --color-blue: #81B3D2;
+    --color-darker-blue:#669EC0;
+    --color-extradark-blue:#5496BD;
 }
 
 /*Global*/
@@ -42,12 +42,38 @@
     line-height: 21px;
     font-weight: 400;
     text-transform: uppercase;
-    color:var(--basic-black);
-    background-color:var(--basic-white);    
+    color:var(--color-black);
+    background-color:var(--color-white);    
 }
 
-a {
-    text-decoration: none;
+.text-center {
+    text-align: center;    
+}
+
+.list-style-none {
+    list-style: none;
+}
+
+.like-h1 {
+    font-size: 30px;
+    line-height: 24px;
+    font-weight: 700;
+}
+.like-h2 {
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: 700;
+}
+.like-h3 {
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: 400;
+}
+
+.like-h4 {
+    font-size: 21px;
+    line-height: 21px;
+    font-weight: 700;
 }
 
 img {
@@ -55,45 +81,29 @@ img {
     height: auto;
 }
 
-h3 {
-    font-size: 21px;
-    line-height: 26px;
-    font-weight: 700;
-    text-align: center;
-}
-
-h2 {
-    font-size: 30px;
-    line-height: 24px;
-    font-weight: 700;
-    text-align: center;
-}
-
-p {
-    text-align: center;
-}
-
-
 /*Main Navigation*/
 
 .main-navigation {
     font-size: 14px;
     line-height: 26px;
     font-weight: 700;
-    color:var(--basic-black);
-    background-color:var(--basic-white);    
+    color: var(--color-black);
+    background-color: var(--color-white);    
 }
 
 .site-navigation {
     list-style: none;
 }
 
+.navigation-items{
+    text-decoration: none;
+}
+
 .container {
-    background-color: var(--basic-white);
+    background-color: var(--color-white);
 }
 
 .introduction {
-        text-align:center;
         font-size: 14px;
         line-height: 26px;
         font-weight: 700;
@@ -106,52 +116,59 @@ p {
     list-style: none;
 }
 
-.advantages-item-1 {
-    text-align: center;
-    color:var(--basic-white);
-    background-color: var(--basic-darker-blue);
+.advantages-blue {
+    color: var(--color-white);
+    background-color: var(--color-darker-blue);
 }
 
-.advantages-item-2 {
-    text-align: center;
-    background-color: var(--basic-white);
+.advantages-white {
+    color: var(--color-black);
+    background-color: var(--color-white);
 }
-.advantages-item-3 {
-    text-align: center;
-    background-color:var(--basic-light-gray) ;
+.advantages-grey {
+    color: var(--color-black);
+    background-color: var(--color-light-gray) ;
 }
 
 /*Button*/
 
 .button {
     font: inherit;
-    text-align: center;
-    color:var(--basic-white);
-    background-color: var(--basic-blue);
+    color: var(--color-white);
+    background-color: var(--color-blue);
     vertical-align: middle;
     border: none;
 }
 
 .button:hover {
-    background-color: var(--basic-darker-blue);
+    color: var(--color-white);
+    background-color: var(--color-darker-blue);    
 }
 
 .button:active {
-    background-color: var(--basic-extradark-blue);
+    color: var(--color-white);
+    background-color: var(--color-extradark-blue);    
 }
+
+/*Appointments*/
 
 .appointment-item input {
     font: inherit;
     border: none;
-    background-color: var(--basic-extralight-grey);
+    background-color: var(--color-extralight-grey);
 }
-
 .appointment-item {
-    text-align:center;
-     
+    color: var(--color-black);
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: 700;        
 }
 
-.
+.appointment-info {
+    background-color: var(--color-brown);
+    color: var(--color-white);
+}
+
 
 /*FOOTER*/
 
@@ -159,25 +176,16 @@ p {
     background-color: gba(255, 255, 255, 0.9); 
 }
 
-.footer-social {
-    list-style: none;
-    text-align: center;
-}
-
 .footer-hashtag {
     font-size: 21px;
     line-height: 26px;
-    text-align: center;
     font-weight: 700;
 }
 
 .contacts-phone {
     font-size: 21px;
     line-height: 26px;
-    text-align: center;
     font-weight: 700;
+    text-decoration: none;
 }
 
-.footer-copyright {
-    text-align: center;
-}  
