@@ -76,6 +76,13 @@
     font-weight: 700;
 }
 
+.like-h5 {
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+}
+
+
 img {
     max-width: 100%;
     height: auto;
@@ -132,7 +139,7 @@ img {
 
 /*Button*/
 
-.button {
+.button-blue {
     font: inherit;
     color: var(--color-white);
     background-color: var(--color-blue);
@@ -140,15 +147,43 @@ img {
     border: none;
 }
 
-.button:hover {
+.button-blue:hover {
     color: var(--color-white);
     background-color: var(--color-darker-blue);    
 }
 
-.button:active {
+.button-blue:active {
     color: var(--color-white);
     background-color: var(--color-extradark-blue);    
 }
+
+.button-brown {
+    font: inherit;
+    color: var(--color-white);
+    background-color: var(--color-brown);
+    vertical-align: middle;
+    border: none;
+}
+
+.button-brown:hover {
+    color: var(--color-white);
+    background-color: var(--color-darker-brown);    
+}
+
+.button-brown:active {
+    color: var(--color-white);
+    background-color: var(--color-extradark-brown); 
+}  
+
+.button-transparent {
+    font: inherit;
+    color: var(--color-white);
+    background-color: none;
+    border: 2px solid white;
+}
+
+
+
 
 /*Appointments*/
 
@@ -169,6 +204,7 @@ img {
     color: var(--color-white);
 }
 
+   
 
 /*FOOTER*/
 
