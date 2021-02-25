@@ -16,8 +16,13 @@
     font-style: normal;
 }
 
-/*Variables*/
+/*Grid*/
 
+.page {
+    height: 100%;
+}
+
+/*Variables*/
 :root {
     --color-black: #000000; 
     --color-white:#FFFFFF;
@@ -44,6 +49,16 @@
     text-transform: uppercase;
     color:var(--color-black);
     background-color:var(--color-white);    
+
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+}
+
+.container {
+    width: 1440;
+    margin: 0 auto;
+    background-color: var(--color-white);
 }
 
 .text-center {
@@ -82,15 +97,24 @@
     font-weight: 400;
 }
 
-
 img {
     max-width: 100%;
     height: auto;
 }
 
+/*Main Header*/
+
+.main-header {
+    display: grid;
+}
+.main-header-logo {
+    justify-self: center;
+}
+
 /*Main Navigation*/
 
 .main-navigation {
+    display: grid;
     font-size: 14px;
     line-height: 26px;
     font-weight: 700;
@@ -99,27 +123,80 @@ img {
 }
 
 .site-navigation {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     list-style: none;
+    grid-gap: 300px;
+  
 }
 
 .navigation-items{
     text-decoration: none;
 }
 
-.container {
-    background-color: var(--color-white);
-}
-
 .introduction {
-        font-size: 14px;
-        line-height: 26px;
-        font-weight: 700;
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: 700;
 }
 
+.intro {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.head-image {
+    display: grid;    
+    grid-template-columns: 1fr 1f 1f 1fr 1f 1f 1fr 1f 1f 1fr 1f 1f;
+    grid-template-rows:  1fr 1f 1f 1fr 1fr 1f 1f 1fr 1fr 1f 1f 1fr;
+}
+
+.head-image-item1 {
+    grid-column-start: 1;
+    grid-column-end: 12;  
+    grid-row-start: 1;
+    grid-row-end: 12;     
+}
+
+.head-image-item2 {
+    grid-column-start: 1;
+    grid-column-end: 12; 
+    grid-row-start: 4;
+    grid-row-end: 8;      
+}
+.head-image-item3 {
+    grid-column-start: 1;
+    grid-column-end: -1; 
+    grid-row-start: 10;
+    grid-row-end: 12;
+}     
 
 /*Advantages*/
 
-.advantages-list {
+.advantages-list-1 {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    list-style: none;
+}
+
+.advantages-list-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    list-style: none;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.advantages-list-3 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    list-style: none;
+}
+
+.advantages-list-4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     list-style: none;
 }
 
@@ -183,9 +260,76 @@ img {
 }
 
 
-
-
 /*Appointments*/
+
+.booking {
+    display: grid;
+    grid-template-columns: auto 568px auto;
+    grid-template-rows:  86px auto 86px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.appointment {    
+    width: 568px;
+    height: 481px;
+    background-color: var(--color-white);
+    grid-column-start: 2;
+    grid-column-end:3;
+    grid-row-start: 1;
+    grid-row-end: -1;
+    z-index: 1; 
+}
+
+.appointment-bg {
+    width: 1199px;
+    height: 594px;
+    margin: 0px;
+    grid-column-start: 1;
+    grid-column-end: -1;
+    grid-row-start: 2;
+    grid-row-end: -1;
+}
+
+.appointment-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+}
+
+.appointment-item:nth-child(1) {
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.appointment-item:nth-child(2) {
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+.appointment-item:nth-child(3) {
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+.appointment-item:nth-child(4){
+    grid-column-start: 8;
+    grid-column-end: 9;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+
+.form-button {
+    grid-column-start: 7;
+    grid-column-end: 8;
+    grid-row-start: 6;
+    grid-row-end: 7;
+}
 
 .appointment-item input {
     font: inherit;
@@ -200,16 +344,25 @@ img {
 }
 
 .appointment-info {
+    width: 568px;
+    height: 86px;
     background-color: var(--color-brown);
     color: var(--color-white);
+    margin: 0px;
+    padding: 0px;
+      
 }
-
-   
-
+ 
 /*FOOTER*/
 
 .main-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    width: auto;
+    margin-bottom: 36px;
     background-color: gba(255, 255, 255, 0.9); 
+    
 }
 
 .footer-hashtag {
@@ -224,4 +377,32 @@ img {
     font-weight: 700;
     text-decoration: none;
 }
+
+.footer-phone-hashtag {
+    grid-column-start:2;
+    grid-column-end: 5;    
+    padding-top: 23px;
+    padding-bottom: 36px;
+}
+
+.footer-social {
+    grid-column-start:6;
+    grid-column-end: 8;
+    padding-top: 36px;
+    padding-bottom: 36px;
+    justify-self: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 6px;
+}
+
+.footer-copyright {
+    grid-column-start:10;
+    grid-column-end: 12;  
+    padding-top: 38px;
+    padding-bottom: 41px;
+}
+
+
+
 
