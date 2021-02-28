@@ -105,16 +105,15 @@ img {
 /*Main Header*/
 
 .main-header {
-    display: grid;
+    display: flex;
 }
 .main-header-logo {
-    justify-self: center;
+    justify-self: center;   
 }
 
 /*Main Navigation*/
 
 .main-navigation {
-    display: grid;
     font-size: 14px;
     line-height: 26px;
     font-weight: 700;
@@ -123,11 +122,11 @@ img {
 }
 
 .site-navigation {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    display: flex;
+    justify-content: space-between;
     list-style: none;
-    grid-gap: 300px;
-  
+    grid-gap: 120px;  
+   
 }
 
 .navigation-items{
@@ -173,6 +172,8 @@ img {
 }     
 
 /*Advantages*/
+
+
 
 .advantages-list-1 {
     display: grid;
@@ -356,11 +357,11 @@ img {
 /*FOOTER*/
 
 .main-footer {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    width: auto;
-    margin-bottom: 36px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 170px;
+    margin: 10px;
     background-color: gba(255, 255, 255, 0.9); 
     
 }
@@ -379,18 +380,13 @@ img {
 }
 
 .footer-phone-hashtag {
-    grid-column-start:2;
-    grid-column-end: 5;    
-    padding-top: 23px;
-    padding-bottom: 36px;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .footer-social {
-    grid-column-start:6;
-    grid-column-end: 8;
-    padding-top: 36px;
-    padding-bottom: 36px;
-    justify-self: center;
+    justify-content: center;
+    align-items: center;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 6px;
