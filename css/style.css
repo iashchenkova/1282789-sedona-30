@@ -173,6 +173,10 @@ img {
 
 /*Advantages*/
 
+.interested {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
 
 
 .advantages-list-1 {
@@ -224,6 +228,7 @@ img {
     vertical-align: middle;
     border: none;
 }
+
 
 .button-blue:hover {
     color: var(--color-white);
@@ -300,36 +305,36 @@ img {
 
 .appointment-item:nth-child(1) {
     grid-column-start: 2;
-    grid-column-end: 5;
+    grid-column-end: 9;
     grid-row-start: 2;
     grid-row-end: 3;
 }
 
 .appointment-item:nth-child(2) {
     grid-column-start: 2;
-    grid-column-end: 5;
+    grid-column-end: 9;
     grid-row-start: 3;
     grid-row-end: 4;
 }
 
 .appointment-item:nth-child(3) {
-    grid-column-start: 2;
-    grid-column-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 7;
     grid-row-start: 4;
     grid-row-end: 5;
 }
 .appointment-item:nth-child(4){
-    grid-column-start: 8;
-    grid-column-end: 9;
+    grid-column-start: 7;
+    grid-column-end: 12;
     grid-row-start: 4;
     grid-row-end: 5;
 }
 
 .form-button {
-    grid-column-start: 7;
+    grid-column-start: 1;
     grid-column-end: 8;
     grid-row-start: 6;
-    grid-row-end: 7;
+    grid-row-end: 7;   
 }
 
 .appointment-item input {
@@ -353,7 +358,35 @@ img {
     padding: 0px;
       
 }
- 
+
+/*CATALOG*/
+
+.hotel-options {
+  display: flex;
+  flex-direction: row;
+  background-image: url("img/background-sedona-blur");
+}
+.infrustructure {
+    align-self: flex-start;
+    margin-left: 220px;
+}
+
+.housing-type{
+    align-self: center;
+    margin-left: 50px;
+}
+
+.price {
+    margin-left: 300px;
+}
+
+.sorting {
+    display: flex;
+    flex-direction: row;}
+
+
+
+
 /*FOOTER*/
 
 .main-footer {

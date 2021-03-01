@@ -11,75 +11,95 @@
 </head>
 
 <body class="page-body">
-  <header class="main-header text-center">
+  <header class="main-header container">
     <nav class="main-navigation">
-      <a href="index.html"><img src="img/logo.svg" width="138" height="70" alt="логотип Sedona"></a>
       <ul class="site-navigation">
         <li><a class="navigation-items" href="#">Информация</a></li>
         <li><a class="navigation-items" href="#">Фото и видео</a></li>
+        <li class="main-header-logo"><a href="index.html"><img src="img/logo.svg" width="138" height="70"
+              alt="логотип Sedona"></a>
+        <li></li>
         <li><a class="navigation-items" href="#">Карта штата</a></li>
         <li><a class="navigation-items" href="catalog.html">Гостиницы</a></li>
       </ul>
     </nav>
   </header>
-  <main>
-    <section>
+  <main class="container">
+    <section class="parameters-hotel">
       <form method="GET" action="https://echo.htmlacademy.ru">
-        <fieldset>
-          <legend>ИНФРАСТРУКТУРА:</legend>
-          <ul class="list-style-none">
-            <li>
-              <input type="checkbox" name="options" value="filter_swimming-pool" checked>
-              <label for="filter_swimming-pool">БАССЕЙН</label>
-            </li>
-            <li>
-              <input type="checkbox" name="options" value="filter_parking">
-              <label for="filter_parking">ПАРКОВКА</label>
-            </li>
-            <li>
-              <input type="checkbox" name="options" value="filter_wi-fi">
-              <label for="filter_wi-fi">WI-FI</label>
-            </li>
-          </ul>
-        </fieldset>
-        <fieldset>
-          <legend>ТИП ЖИЛЬЯ:</legend>
-          <ul class="list-style-none">
-            <li>
-              <input type="checkbox" name="options" value="filter_hotel" checked>
-              <label for="filter_hotel">ГОСТИНИЦА</label>
-            </li>
-            <li>
-              <input type="checkbox" name="options" value="filter_motel" checked>
-              <label for="filter_motel">МОТЕЛЬ</label>
-            </li>
-            <li>
-              <input type="checkbox" name="options" value="filter_appartaments" checked>
-              <label for="filter_appartaments">АППАРТАМЕНТЫ</label>
-            </li>
-          </ul>
-        </fieldset>
-        <fieldset>
-          <legend>СТОИМОСТЬ В СУТКИ(Р):</legend>
-          <input type="number" id="volume" min="0" max="3000" step="100">
-          <label for="volume">От 0 до 3000</label>
-          <button type="button" class="button-transparent">ПОКАЗАТЬ</button>
-        </fieldset>
+        <div class="hotel-options">
+          <div class="infrustructure">
+            <fieldset>
+              <legend>ИНФРАСТРУКТУРА:</legend>
+              <ul class="list-style-none">
+                <li>
+                  <input type="checkbox" name="options" value="filter_swimming-pool" checked>
+                  <label for="filter_swimming-pool">БАССЕЙН</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="options" value="filter_parking">
+                  <label for="filter_parking">ПАРКОВКА</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="options" value="filter_wi-fi">
+                  <label for="filter_wi-fi">WI-FI</label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+          <div class="housing-type">
+            <fieldset>
+              <legend>ТИП ЖИЛЬЯ:</legend>
+              <ul class="list-style-none">
+                <li>
+                  <input type="checkbox" name="options" value="filter_hotel" checked>
+                  <label for="filter_hotel">ГОСТИНИЦА</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="options" value="filter_motel" checked>
+                  <label for="filter_motel">МОТЕЛЬ</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="options" value="filter_appartaments" checked>
+                  <label for="filter_appartaments">АППАРТАМЕНТЫ</label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+          <div class="price">
+            <fieldset>
+              <legend>СТОИМОСТЬ В СУТКИ(Р):</legend>
+              <input type="number" id="volume" min="0" max="3000" step="100">
+              <label for="volume">От 0 до 3000</label>
+              <button type="button" class="button-transparent">ПОКАЗАТЬ</button>
+            </fieldset>
+          </div>
+        </div>
       </form>
     </section>
-    <section>
-      <p class="like-h2">НАЙДЕНО:3</p>
-      <p class="like-h5">СОРТИРОВКА:</p>
-      <ul class="list-style-none">
-        <li class="like-h5"><a href="#">ПО ЦЕНЕ</a></li>
-        <li class="like-h5"><a href="#">ПО ТИПУ</a></li>
-        <li class="like-h5"><a href="#">ПО РЕЙТИНГУ</a></li>
-      </ul>
-      <ul class="list-style-none">
-        <li><a href="#" id="prev">Prev</a></li>
-        <li><a href="#" id="next">Next</a></li>
-      </ul>
-    </section>
+    <div class="sorting">
+      <section>
+        <div class="sorting-item1">
+          <p class="like-h2">НАЙДЕНО:3</p>
+        </div>
+        <div class="sorting-item2">
+          <p class="like-h5">СОРТИРОВКА:</p>
+        </div>
+        <div class="sorting-item3">
+          <ul class="list-style-none">
+            <li class="like-h5"><a href="#">ПО ЦЕНЕ</a></li>
+            <li class="like-h5"><a href="#">ПО ТИПУ</a></li>
+            <li class="like-h5"><a href="#">ПО РЕЙТИНГУ</a></li>
+          </ul>
+        </div>
+        <div class="sorting-item4">
+        <ul class="list-style-none">
+          <li><a href="#" id="prev">Prev</a></li>
+          <li><a href="#" id="next">Next</a></li>
+        </ul>
+      </div>
+      </section>
+    </div>
     <section>
       <article>
         <img src="img/amara-resort-and-spa.jpg" width="135" height="90" alt="отель Amara Resort & Spa">
@@ -107,10 +127,11 @@
       </article>
     </section>
   </main>
-  <footer class="main-footer text-center">
-    <p class="footer-hashtag">#VISITSEDONA</p>
-    <p><a class="contacts-phone" href="tel:+7(495) 666-01-66">тел:+7(495) 666-01-66</a></p>
-
+  <footer class="main-footer container">
+    <div class="footer-phone-hashtag text-center">
+      <p class="footer-hashtag">#VISITSEDONA</p>
+      <p><a class="contacts-phone" href="tel:+7(495) 666-01-66">тел:+7(495) 666-01-66</a></p>
+    </div>
     <ul class="footer-social list-style-none">
       <li>
         <a class="social-button" href="#" target="blank"><img src="img/twitter.svg" width="46" height="48"
@@ -125,9 +146,9 @@
             alt="youtube"></a>
       </li>
     </ul>
-
     <p class="footer-copyright"><img src="img/website-by-html-academy.svg" width="197" height="41" alt="HTML-ACADEMY">
     </p>
   </footer>
 </body>
+
 </html>
