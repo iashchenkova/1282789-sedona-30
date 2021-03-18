@@ -20,6 +20,8 @@
 
 .page {
     height: 100%;
+    position: relative;
+   
 }
 
 /*Variables*/
@@ -58,10 +60,8 @@
 .container {
     width: 1200px;
     padding: 0 20px;     
-    margin: 0 auto;
-    text-align: center;
-    box-sizing: border-box;
-    background-color: var(--color-white);
+    margin: 0 auto;  
+    box-sizing: border-box;   
 }
 
 .text-center {
@@ -105,6 +105,10 @@ img {
     height: auto;
 }
 
+ul img {
+    display: flex;
+}
+
 fieldset {
     border: 0;
 }
@@ -116,14 +120,16 @@ fieldset {
 }
 .main-header-logo {
     position: absolute;
-    left: 47%;
-    translate: 47%;
+    transform: translateX(-60px);
+    translate: 50%; 
+    left: 50%; 
 }
-    
-/*Main Navigation*/
+  
+ /*Main Navigation*/
 
 .main-navigation {
     display: flex;
+    position: relative;
     font-size: 14px;
     line-height: 26px;
     font-weight: 700;
@@ -131,30 +137,30 @@ fieldset {
     background-color: var(--color-white);      
 }
 
-.site-navigation {
-    display: flex;
+.main-navigation ul{
+    width: 1200px;
+    display: flex;   
+    flex-direction: row; 
     flex-wrap: wrap;
-    list-style: none;      
+    list-style: none;  
+    padding: 15px 0; 
+    margin: 0;
 }
 
-.site-navigation li:nth-child(1) {
-    padding: 0  72px 0 50px;
+.site-navigation li {
+    flex: 1;       
 }
 
 .site-navigation li:nth-child(2) {
-    padding: 0  72px 0 72px;
+    flex: 2;  
 }
 
 .site-navigation li:nth-child(3) {
-    padding: 0  72px 0 300px;
-}
-
-.site-navigation li:nth-child(4) {
-    padding: 0  72px 0 50px;
+    flex: 2;  
 }
 
 .site-navigation a  {
-    text-decoration:none;
+    text-decoration: none;
     color: var(--color-black);    
 }
 
@@ -170,74 +176,95 @@ fieldset {
     color: var(--color-grey);    
 }
  
-.intro {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 40px 0  40px 0;   
-}
+/* HEAD IMAGE */
 
 .head-image {
     display: grid;   
 }
 
-.head-image-item1 {
+.head-image-photo {
     display: flex;
     grid-column-start: 1;
-    grid-column-end: 12;  
+    grid-column-end: 10;  
     grid-row-start: 1;
     grid-row-end: 12;     
 }
 
-.head-image-item2 {
+.head-image-welcome {
     grid-column-start: 1;
     grid-column-end: 12; 
-    grid-row-start: 4;
-    grid-row-end: 8;      
+    grid-row-start: 8;
+    grid-row-end: 10;      
 }
-.head-image-item3 {
+.head-image-figure {
     display: flex;
     grid-column-start: 1;
     grid-column-end: -1; 
-    grid-row-start: 10;
+    grid-row-start: 11;
     grid-row-end: 12;
 }     
 
-/*Advantages*/
+/* INTRO  PARAGRAPHS */
+
+.intro {
+    padding: 40px 0 40px 0;   
+}
 
 .interested {
     margin: 60px 0;
 }
 
-.advantages-item2 img {
-    display: flex;   
-    margin: 0;
-}
+/*Advantages*/
 
-.advantages-list-3 img {
+.advantages-list-photo img {
     display: flex;   
 }
 
-.advantages-list-1 {
-    display: flex;   
-    list-style: none;
-}
-
-.advantages-list-2 {
+.advantages-list-photo {
     display: flex;  
+    flex-direction: row;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.advantages-list-white {
+    display: flex;
     flex-direction: row;
     justify-content: space-around;
-    list-style: none;
-    padding-top: 30px;
+    list-style: none;    
+    margin: 0;
+    padding: 50px;     
+    background-color: var(--color-white);
+    color: var(--color-black);
 }
 
-.advantages-list-3 {
-    display: flex;  
-    flex-direction: row;
-    list-style: none;
+.advantages-list-white li {
+   display: flex;
+   flex-direction: column;
+   align-content: center;    
 }
 
-.advantages-list-4 {
+.advantages-list-white .burger-icon{
+    display: flex;
+    margin: 20px 0 0 98px;  
+ }
+
+ .advantages-list-white .present-icon{
+    display: flex;
+    margin-left: 95px; 
+ }
+
+ .advantages-list-white .home-icon {
+    display: flex;
+    margin: 18px 0 0 90px;  
+ }
+
+
+
+.advantages-list-grey {
+    margin: 0;
+    padding: 0;
     display: flex;  
     flex-direction: row;
     justify-content: space-around;
@@ -245,22 +272,16 @@ fieldset {
     background-color: var(--color-light-gray);
 }
 
+.advantages-list-grey li {
+    padding: 25px;
+    color: var(--color-black);    
+}
+
 .advantages-blue {   
     width: 400px;
     color: var(--color-white);
     background-color: var(--color-blue);
 }
-
-.advantages-white {
-    color: var(--color-black);
-    background-color: var(--color-white);
-}
-.advantages-grey {
-    padding: 20px;
-    color: var(--color-black);
-    background-color: var(--color-light-gray) ;
-}
-
 
 /*Button*/
 
@@ -275,20 +296,17 @@ fieldset {
 
 .button-blue:hover {
     color: var(--color-white);
-    background-color: var(--color-darker-blue);  
-     
+    background-color: var(--color-darker-blue);   
 }
 
 .button-blue:focus {
     color: var(--color-extralight-grey);
-    background-color: var(--color-extradark-blue);  
-    
+    background-color: var(--color-extradark-blue);     
 }
 
 .button-blue:active {
     color: var(--color-extralight-grey);
-    background-color: var(--color-extradark-blue);  
-   
+    background-color: var(--color-extradark-blue);    
 }
 
 .button-brown {
@@ -317,8 +335,11 @@ fieldset {
     color: var(--color-white);
     background-color: transparent; 
     border: 1px solid white;
-    outline: 0;    
-}
+    outline: 0;
+    text-transform: uppercase; 
+    margin-top: 20px;
+    margin-left: 40px;   
+}  
 
 .button-transparent:hover {
     font: inherit;
@@ -343,7 +364,16 @@ fieldset {
     height: 27px;   
 }
 
-/*Appointments*/
+/*Appointment*/
+
+.appointment-info {
+    display: table-cell;
+    width: 568px;
+    height: 86px;
+    background-color: var(--color-brown);
+    color: var(--color-white);
+    vertical-align: middle;
+}
 
 .booking {
     display: grid;
@@ -358,45 +388,66 @@ fieldset {
     height: 481px;
     background-color: var(--color-white);
     grid-column-start: 2;
-    grid-column-end:3;
-    grid-row-start: 1;
-    grid-row-end: -1;
-    z-index: 1; 
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 1;  
+    z-index: 2; 
 }
 
-.appointment-bg {
-    width: 100%;
-    height: auto;
+.appointment-bg-map {
     grid-column-start: 1;
     grid-column-end: -1;
-    grid-row-start: 2;
+    grid-row-start: 3;
     grid-row-end: -1;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    z-index: 1;    
 }
 
 .appointment-form {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-content: space-between;
     flex-wrap: wrap;
+    margin: 50px 0  0 45px;     
 }
 
-.appointment-form .appointment-item:nth-child(1) {
-    margin: 40px 0 55px 55px;    
+.appointment-form label {
+    margin-right: 15px;
 }
 
-.appointment-form .appointment-item:nth-child(2) {
-    margin: -20px 0 55px 55px; 
+.appointment-form  div {
+    padding: 10px;
+}
+ 
+.number-of-people {
+    display: flex;  
+    flex-direction: row;
+    justify-content: space-around;
 }
 
-.appointment-form .appointment-item:nth-child(3) {
-    margin: -20px 0 0 55px; 
-    
+.date-of-arrival input {
+    width: 346px;
+    height: 38px;
 }
-.appointment-form .appointment-item:nth-child(4){
-    margin: -20px 0 60px 60px; 
+.date-of-departure input {
+    width: 346px;
+    height: 38px;
+}
+
+.children input {
+    width: 114px;
+    height: 38px;
+}
+
+.adults input {
+    width: 114px;
+    height: 38px;
 }
 
 .form-button {
-    margin: -20px 55px 55px 55px;    
+    margin-top: 15px;
 }
 
 .appointment-item input {
@@ -409,51 +460,6 @@ fieldset {
     font-size: 14px;
     line-height: 26px;
     font-weight: 700;        
-}
-
-.appointment-item:nth-child(1) label {
-    margin-right: 18px;    
-}
-
-.appointment-item:nth-child(2) label {
-    margin-right: 14px;    
-}
-
-.appointment-item:nth-child(3) label {
-     margin-right: 33px;    
-}
-
-.appointment-item:nth-child(4) label {
-    margin-right: 10px;    
-}
-
-.appointment-item:nth-child(1) input {
-    width: 346px;
-    height: 38px;
-}
-
-.appointment-item:nth-child(2) input {
-    width: 346px;
-    height: 38px;
-}
-
-.appointment-item:nth-child(3) input {
-    width: 114px;
-    height: 38px;
-}
-
-.appointment-item:nth-child(4) input {
-    width: 114px;
-    height: 38px;
-}
-
-.appointment-info {
-    display: table-cell;
-    width: 568px;
-    height: 86px;
-    background-color: var(--color-brown);
-    color: var(--color-white);
-    vertical-align: middle;
 }
 
 /*CATALOG*/
@@ -482,29 +488,22 @@ fieldset {
     grid-row-end: 3;
 }
 
-.hotel-options {
-    display: flex;
-    flex-direction: row;
-    background-image: url("img/background-sedona-blur");
-}
-
-/* CHECK-BOXES */
-
 .infrustructure-box {
+    display: flex;
     margin: 30px 35px 0 90px;
 }
 
 .housing-type-box {
+    display: flex;
     margin: 31px 35px 0 20px;
 }
 
-.infrustructure legend {
-    margin-left: -20px;
+.price-box {
+    margin: 40px 30px 0 350px;
 }
 
-.housing-type-box legend {
-    margin-left: -38px;
-}
+
+/* CHECK-BOXES */
 
 .check__input {
     position: absolute;
@@ -525,10 +524,6 @@ fieldset {
     background-image: url("data:image/svg+xml,%3Csvg width='27' height='23' viewBox='0 0 27 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.28505 7.48601L4.45605 10.315L12.2391 18.098L26.1711 4.16601L23.3431 1.33701L12.2391 12.439L7.28505 7.48601Z' fill='white'/%3E%3Cpath d='M21 20C21 20.542 20.542 21 20 21H3C2.458 21 2 20.542 2 20V3C2 2.458 2.458 2 3 2H19.908L21.493 0.415C21.041 0.146542 20.5257 0.00329969 20 0H3C1.35 0 0 1.35 0 3V20C0 21.65 1.35 23 3 23H20C21.65 23 23 21.65 23 20V10.171L21 12.171V20Z' fill='white'/%3E%3C/svg%3E");
 }
     
-.check {
-    padding-left: 0,9em;
-}
-
 .infrustructure {
     display: flex;
     flex-direction: column;
@@ -552,6 +547,7 @@ fieldset {
 }
 
 /*PRICE RANGE*/
+
 
 .price {
    margin: 0;
@@ -659,20 +655,16 @@ fieldset {
     background-color: transparent;
     font-size: inherit;
     font-size: inherit;
-    border-top: 2px solid white;
+    border: 2px solid white;
     border-bottom: 2px solid white;
     border-right: 2px solid white;
-    border-left: 2px dashed white;    
     text-align: center;
     color: var(--color-white);
     outline: 0;
 }
 
-.price-box .button-transparent {
-    margin-top: 20px;
-    margin-left: 40px;
-}
- 
+
+
 /*HOTELS OPTIONS*/
 
 .hotels {
@@ -717,17 +709,15 @@ fieldset {
 .rating {
     width: 130px;
     height: 27px;
-    align-self: flex-end;
-    text-align: center; 
-    margin-left: 420px;
-    margin-bottom: 35px;     
-    background-color: var(--color-extralight-grey);    
+    margin: 95px 0 0 420px;
+    background-color: var(--color-extralight-grey);  
+    text-align: center;
 }
 
 .rating::before {
     content: "";
     position: absolute;
-    background-image: url(blue_stars.svg) no-repeat 50% 50%;;
+    background-image: url(img/blue-stars) no-repeat 50% 50%;
 }
 
 .hotel-info-buttons {
@@ -736,21 +726,16 @@ fieldset {
     justify-content: space-between;   
 }
 
-.price-box {
-    margin: 40px 30px 0 350px;
-}
-
 .search {
     display: flex;
     flex-direction: row;
     align-content: flex-start;
-    max-width: 1200px;
     height: 86px;    
     border: 1px solid var(--color-light-gray);
 }
 
 .found-number {
-    margin: 10px 10px 0 75px;
+    margin: 30px 10px 0 80px;
 }
 
 .search .like-h5 {
@@ -794,55 +779,35 @@ fieldset {
     border: none;
 }
 
-.prev-next {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 35px 20px 0 380px;
-}
+.prev-next{
+    display: flex;   
+    flex-direction: row; 
+    flex-wrap: wrap;  
+    margin-left: 500px; 
+}  
 
-.prev  {
-    fill: var(--color-grey);
-}
-
-.next {
-    fill: var(--color-grey);
-}
-
-.prev:hover path {
+.prev-next a:hover path {
     fill: var(--color-black);    
 }
 
-.next:hover path {
-    fill: var(--color-black);     
-}
-
-.prev:focus path{
+.prev-next a:focus path{
     fill: var(--color-blue);    
 }
 
-.next:focus path{
+.prev-next a:active path{
     fill: var(--color-blue);    
 }
 
-.prev:active path{
-    fill: var(--color-blue);    
-}
-
-.next:active path{
-    fill: var(--color-blue);    
-}
 
 /*FOOTER*/
 
 .main-footer {
     display: flex;
-    justify-content: center;
     gap: 150px;
-    margin: 10px;
     background-color: rgba(255, 255, 255, 0.8); 
-    position: relative;
-    bottom: 120px ; 
+    position: absolute;
+    z-index: 2;
+    bottom: 0;   
 }
 
 .main-footer-catalog {
@@ -866,11 +831,9 @@ fieldset {
 }
 
 .footer-social {
-    justify-content: center;
-    align-items: center;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 6px;
+    display: flex;
+    gap: 5px;
+    margin-top: 20px;
 }
 
 .footer-copyright {
