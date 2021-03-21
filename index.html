@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
+
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
@@ -8,12 +9,13 @@
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/icon.svg" type="image/svg+xml">
 </head>
-<body class="page-body">
-  <header class="main-header  text-center">
-    <nav class="main-navigation container">
+
+<body class="page-body container">
+  <header class="main-header">
+    <nav class="main-navigation text-center">
       <a class="main-header-logo" href="index.html"><img src="img/logo.svg" width="138" height="70"
           alt="логотип Sedona"></a>
-      <ul class="site-navigation container">
+      <ul class="site-navigation">
         <li><a href="#">Информация</a></li>
         <li><a href="#">Фото и видео</a></li>
         <li><a href="#">Карта штата</a></li>
@@ -21,8 +23,8 @@
       </ul>
     </nav>
   </header>
-  <main  class="container">
-    <div class="head-image  text-center">
+  <main>
+    <div class="head-image text-center">
       <div class="head-image-photo">
         <img src="img/background-photo-sedona.jpg" width="1200" height="auto" alt="sedona photo">
       </div>
@@ -48,11 +50,11 @@
         </li>
         <li>
           <img src="img/sedona-1.jpg" width="800" height="256" alt="Седона">
-        </li>        
+        </li>
       </ul>
       <ul class="advantages-list-white">
         <li>
-          <img class="home-icon"src="img/home-icon.svg" width="75" height="72" alt="home icon">
+          <img class="home-icon" src="img/home-icon.svg" width="75" height="72" alt="home icon">
           <h4 class="like-h4">ЖИЛЬЁ</h4>
           <p>РЕКОМЕНДУЕМ ПОЖИТЬ В НАСТОЯЩЕМ<br>
             МОТЕЛЕ, КАК В КИНО</p>
@@ -102,12 +104,12 @@
         </li>
       </ul>
     </section>
-      <section class="interested  text-center">
+    <div class="booking">
+      <section class="interested text-center">
         <h2 class="like-h1">ЗАИНТЕРЕСОВАЛИСЬ?</h2>
         <p> УКАЖИТЕ ПРЕДПОЛАГАЕМЫЕ ДАТЫ ПОЕЗДКИ, <br>
           И МЫ ПОКАЖЕМ ВАМ ЛУЧШИЕ ПРЕДЛОЖЕНИЯ ГОСТИНИЦ В СЕДОНЕ</p>
-      </section>    
-    <div class="booking">
+      </section>
       <div class="appointment-bg-map">
         <img src="img/map.png" width="1200" height="593" alt="sedona-map">
       </div>
@@ -123,14 +125,14 @@
             <input type="date" name="calendar">
           </div>
           <div class="number-of-people">
-          <div class="appointment-item adults">
-            <label for="number">Взрослые:</label>
-            <input type="number" placeholder="0" name="how many adults" min="0" max="10">
-          </div>
-          <div class="appointment-item children">
-            <label for="number">Дети:</label>
-            <input type="number" placeholder="0" name="how many children" min="0" max="10">
-          </div>
+            <div class="appointment-item adults">
+              <label for="number">Взрослые:</label>
+              <input type="number" placeholder="0" name="how many adults" min="0" max="10">
+            </div>
+            <div class="appointment-item children">
+              <label for="number">Дети:</label>
+              <input type="number" placeholder="0" name="how many children" min="0" max="10">
+            </div>
           </div>
           <div class="like-h2 form-button">
             <input type="button" name="search" value="НАЙТИ" class="button-blue">
@@ -139,29 +141,29 @@
       </section>
     </div>
   </main>
-      <footer class="main-footer container">
-      <div class="footer-phone-hashtag text-center">
-        <p class="footer-hashtag">#VISITSEDONA</p>
-        <p><a class="contacts-phone" href="tel:+74956660166">тел:+7(495)666-01-66</a></p>
-      </div>
-      <ul class="footer-social list-style-none">
-        <li>
-          <a class="social-button" href="#" target="blank"><img src="img/twitter.svg" width="46" height="48"
-              alt="twitter"></a>
-        </li>
-        <li>
-          <a class="social-button" href="#" target="blank"><img src="img/facebook.svg" width="46" height="48"
-              alt="facebook"></a>
-        </li>
-        <li>
-          <a class="social-button" href="#" target="blank"><img src="img/youtube.svg" width="46" height="48"
-              alt="youtube"></a>
-        </li>
-      </ul>
-      <a class="footer-copyright" href="#">
-        <img src="img/website-by.svg" width="74" height="26" alt="HTML-ACADEMY">
-        <svg width="115" height="41" viewBox="0 0 115 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M15.5197 1.05737H15.3509L0 2.71895V31.4945L15.3509 40.8382L30.7018 31.4945V2.71895L15.5197 1.05737ZM77.0183 
+  <footer class="main-footer">
+    <div class="footer-phone-hashtag text-center">
+      <p class="footer-hashtag">#VISITSEDONA</p>
+      <p><a class="contacts-phone" href="tel:+74956660166">тел:+7(495)666-01-66</a></p>
+    </div>
+    <ul class="footer-social list-style-none">
+      <li>
+        <a class="social-button" href="#" target="blank"><img src="img/twitter.svg" width="46" height="48"
+            alt="twitter"></a>
+      </li>
+      <li>
+        <a class="social-button" href="#" target="blank"><img src="img/facebook.svg" width="46" height="48"
+            alt="facebook"></a>
+      </li>
+      <li>
+        <a class="social-button" href="#" target="blank"><img src="img/youtube.svg" width="46" height="48"
+            alt="youtube"></a>
+      </li>
+    </ul>
+    <a class="footer-copyright" href="#">
+      <img src="img/website-by.svg" width="74" height="26" alt="HTML-ACADEMY">
+      <svg width="115" height="41" viewBox="0 0 115 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M15.5197 1.05737H15.3509L0 2.71895V31.4945L15.3509 40.8382L30.7018 31.4945V2.71895L15.5197 1.05737ZM77.0183 
            2.62185H75.0876V15.7311H77.0183V2.62185ZM40.8619 2.63264V7.76843C41.6131 6.9864 42.6386 6.5436 43.7105 
            6.53843C44.6823 6.47908 45.6329 6.84495 46.3253 7.54479C47.0177 8.24462 47.3866 9.21244 47.3399 
            10.2068V15.7634H45.367V10.4658C45.4231 9.94897 45.2754 9.43059 44.9566 9.02553C44.6377 8.62047 44.174 8.36218
@@ -214,8 +216,9 @@
            15.0837V16.4971L22.156 20.7266L22.0083 20.8237L20.9532 21.4063L15.2876 17.9537V19.3995L19.761 22.1184L18.706 22.8413L15.3298 
            20.7913V22.2047L17.5454 23.5426L15.2982 24.9021L2.11009 16.864L15.3087 8.72869L28.7078 16.7776ZM15.2876 7.27211L28.7078 
            15.3534V4.56395L15.3615 3.12895L2.01514 4.56395V15.3534L15.2876 7.27211Z" fill="#231F20" />
-        </svg>
-      </a>
-    </footer>  
+      </svg>
+    </a>
+  </footer>
 </body>
+
 </html>

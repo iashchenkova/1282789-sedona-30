@@ -20,8 +20,7 @@
 
 .page {
     height: 100%;
-    position: relative;
-   
+    background-color: var(--color-extralight-grey);
 }
 
 /*Variables*/
@@ -50,20 +49,21 @@
     font-weight: 400;
     text-transform: uppercase;
     color:var(--color-black);
-    background-color:var(--color-white);    
+    background-color: var(--color-light-gray);    
 
     min-height: 100%;
     display: grid;
-    grid-template-rows: min-content 1fr min-content;
+    grid-template-rows: min-content 1fr min-content;    
 }
 
 .container {
     width: 1200px;
-    padding: 0 20px;     
+    padding: 0;     
     margin: 0 auto;  
-    box-sizing: border-box;   
+    box-sizing: border-box;
+    box-shadow: 12px 0 15px -4px rgba(0, 0, 0, 0.2), -12px 0 8px -4px rgba(0, 0, 0, 0.2);   
 }
-
+    
 .text-center {
     text-align: center;    
 }
@@ -118,45 +118,50 @@ fieldset {
 .main-header {
     display: flex;
 }
+
 .main-header-logo {
+    width: 138px;
+    height: 70px;   
     position: absolute;
-    transform: translateX(-60px);
-    translate: 50%; 
-    left: 50%; 
+    left:0;
+    right:0;
+    margin:0 auto;    
 }
   
  /*Main Navigation*/
 
-.main-navigation {
-    display: flex;
+ .main-navigation {
+    width: 1200px;
+    height: 50px;   
     position: relative;
     font-size: 14px;
     line-height: 26px;
     font-weight: 700;
     color: var(--color-black);
-    background-color: var(--color-white);      
+    background-color: var(--color-white);   
 }
 
 .main-navigation ul{
-    width: 1200px;
     display: flex;   
     flex-direction: row; 
     flex-wrap: wrap;
     list-style: none;  
-    padding: 15px 0; 
-    margin: 0;
+    padding: 0;
+    margin: 0;  
 }
 
+
 .site-navigation li {
-    flex: 1;       
+    padding: 10px;   
+    flex: 1;  
 }
 
 .site-navigation li:nth-child(2) {
-    flex: 2;  
+    flex: 2;    
 }
 
 .site-navigation li:nth-child(3) {
-    flex: 2;  
+    flex: 2;    
 }
 
 .site-navigation a  {
@@ -207,11 +212,8 @@ fieldset {
 /* INTRO  PARAGRAPHS */
 
 .intro {
-    padding: 40px 0 40px 0;   
-}
-
-.interested {
-    margin: 60px 0;
+    padding: 40px 0 40px 0;  
+    background-color: var(--color-white); 
 }
 
 /*Advantages*/
@@ -260,8 +262,6 @@ fieldset {
     margin: 18px 0 0 90px;  
  }
 
-
-
 .advantages-list-grey {
     margin: 0;
     padding: 0;
@@ -273,7 +273,7 @@ fieldset {
 }
 
 .advantages-list-grey li {
-    padding: 25px;
+    padding: 35px;
     color: var(--color-black);    
 }
 
@@ -300,12 +300,12 @@ fieldset {
 }
 
 .button-blue:focus {
-    color: var(--color-extralight-grey);
+    color: var(--color-white);
     background-color: var(--color-extradark-blue);     
 }
 
 .button-blue:active {
-    color: var(--color-extralight-grey);
+    color: rgba(255, 255, 255, 0.5);
     background-color: var(--color-extradark-blue);    
 }
 
@@ -324,7 +324,7 @@ fieldset {
 }
 
 .button-brown:active {
-    color: var(--color-white);
+    color: rgba(255, 255, 255, 0.5);
     background-color: var(--color-extradark-brown);   
 }  
 
@@ -366,6 +366,17 @@ fieldset {
 
 /*Appointment*/
 
+.interested {
+    padding: 50px  0 50px 0;
+    background-color: var(--color-white); 
+    z-index: 1;
+    grid-column-start: 1;
+    grid-column-end: -1; 
+    grid-row-start: 1;
+    grid-row-end: 4;
+}
+
+
 .appointment-info {
     display: table-cell;
     width: 568px;
@@ -373,12 +384,23 @@ fieldset {
     background-color: var(--color-brown);
     color: var(--color-white);
     vertical-align: middle;
+    z-index: 2;
+}
+
+.appointment-info:hover {
+    background-color: var(--color-darker-brown);
+    color: var(--color-white) ;
+}
+
+.appointment-info:active{
+    background-color: var(--color-extradark-brown);
+    color: rgba(255, 255, 255, 0.5);
 }
 
 .booking {
     display: grid;
     grid-template-columns: auto 568px auto;
-    grid-template-rows:  86px auto 86px;
+    grid-template-rows: repeat(5, 100px);
     margin: 0px;
     padding: 0px;
 }
@@ -389,16 +411,16 @@ fieldset {
     background-color: var(--color-white);
     grid-column-start: 2;
     grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 1;  
+    grid-row-start: 3;
+    grid-row-end: 8;  
     z-index: 2; 
 }
 
 .appointment-bg-map {
     grid-column-start: 1;
-    grid-column-end: -1;
-    grid-row-start: 3;
-    grid-row-end: -1;
+    grid-column-end: 4;
+    grid-row-start: 4;
+    grid-row-end: 10;
     position: relative;
     margin: 0;
     padding: 0;
@@ -417,6 +439,14 @@ fieldset {
     margin-right: 15px;
 }
 
+.adults label {
+    margin-right: 35px;
+}
+
+.children label {
+    margin-right: 35px;
+}
+
 .appointment-form  div {
     padding: 10px;
 }
@@ -424,7 +454,9 @@ fieldset {
 .number-of-people {
     display: flex;  
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
+    gap: 20px;
+    
 }
 
 .date-of-arrival input {
@@ -451,10 +483,26 @@ fieldset {
 }
 
 .appointment-item input {
+    box-sizing: border-box;
     font: inherit;
     border: none;
     background-color: var(--color-extralight-grey);
 }
+
+.appointment-item input:hover {
+    font: inherit;
+    border: none;
+    background-color: var(--color-light-gray);
+}
+
+.appointment-item input:focus {
+    font: inherit;
+    border: none;
+    background-color: var(--color-white);
+    border: solid 2px var(--color-light-gray);
+    outline: none;
+}
+
 .appointment-item {
     color: var(--color-black);
     font-size: 14px;
@@ -481,7 +529,8 @@ fieldset {
 
 .form-parameters-hotel {
     display: flex;
-    flex-direction: row;    
+    flex-direction: row;
+    margin: 25px 25px 25px 100px;  
     grid-column-start: 1;
     grid-column-end: 12;  
     grid-row-start: 1;
@@ -490,16 +539,20 @@ fieldset {
 
 .infrustructure-box {
     display: flex;
-    margin: 30px 35px 0 90px;
+    flex: 1;   
 }
 
 .housing-type-box {
     display: flex;
-    margin: 31px 35px 0 20px;
+    flex: 1;   
 }
 
 .price-box {
-    margin: 40px 30px 0 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 90px;
+    flex: 2;   
 }
 
 
@@ -669,6 +722,7 @@ fieldset {
 
 .hotels {
   display: flex;
+  background-color: var(--color-white);
   flex-direction: row;
   flex-wrap: wrap;
 }
@@ -684,14 +738,13 @@ fieldset {
 .hotels-item img {
     width: 135px;
     height: 90px;
-    margin: 30px 75px;  
+    margin: 30px 30px 0 75px;  
     object-fit: contain;  
 }
 
 .hotel-item-info {
     display: flex;
     flex-direction: column;
-    align-content: flex-start;
     height: 90px;
     width: 260px;    
 }
@@ -709,15 +762,37 @@ fieldset {
 .rating {
     width: 130px;
     height: 27px;
-    margin: 95px 0 0 420px;
+    margin: 95px 0 0 500px;
     background-color: var(--color-extralight-grey);  
     text-align: center;
 }
 
-.rating::before {
-    content: "";
+.rating-amara-resort-spa::before {  
+    content: " ";
     position: absolute;
-    background-image: url(img/blue-stars) no-repeat 50% 50%;
+    width: 91px;
+    height: 17px;
+    margin: -60px 0 0 20px;     
+    background: url(../img/four_blue_stars.svg);   
+}
+
+.rating-desert-quail-inn::before {  
+    content: " ";
+    position: absolute;
+    width: 66px;
+    height: 17px;
+    margin: -60px 0 0 40px;     
+    background: url(../img/three_blue_stars.svg);   
+}
+
+
+.rating-villas-at-poco-diablo::before {  
+    content: " ";
+    position: absolute;
+    width: 42px;
+    height: 17px;
+    margin: -60px 0 0 65px;     
+    background: url(../img/two_blue_stars.svg);   
 }
 
 .hotel-info-buttons {
@@ -729,33 +804,36 @@ fieldset {
 .search {
     display: flex;
     flex-direction: row;
-    align-content: flex-start;
+    background-color: var(--color-white);
     height: 86px;    
     border: 1px solid var(--color-light-gray);
-}
-
-.found-number {
-    margin: 30px 10px 0 80px;
-}
-
-.search .like-h5 {
-    margin: 35px 35px 0 87px;
 }
 
 .search ul {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 0;   
+}
+
+.found-number {
+    margin: 30px 0 0 80px;
+    flex: 1;  
+}
+
+.search .like-h5 {
+    margin: 35px 0 0 35px;
+    flex: 1;
 }
 
 .sorting {    
     display: flex;
-    flex-direction: row;    
+    flex-direction: row;  
+    justify-content: flex-start;
+    flex: 6;  
 }
 
 .sorting li {    
-   margin-left: 30px;
-   margin-top: 33px;
+   margin: 33px 0 0 25px;  
 }
 
 .sorting a{ 
@@ -779,12 +857,19 @@ fieldset {
     border: none;
 }
 
+
 .prev-next{
-    display: flex;   
-    flex-direction: row; 
-    flex-wrap: wrap;  
-    margin-left: 500px; 
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: end;
+    align-self: center;
+    flex: 1;   
 }  
+
+.prev-next a:hover path {
+    fill: var(--color-grey);    
+}
 
 .prev-next a:hover path {
     fill: var(--color-black);    
@@ -802,21 +887,23 @@ fieldset {
 /*FOOTER*/
 
 .main-footer {
+    height: 120px;
+    margin-top: -120px;
     display: flex;
+    justify-content: center;
     gap: 150px;
     background-color: rgba(255, 255, 255, 0.8); 
-    position: absolute;
-    z-index: 2;
-    bottom: 0;   
+    z-index: 2;    
 }
 
 .main-footer-catalog {
     display: flex;
     justify-content: center;
-    gap: 170px;
-    margin: 10px;
+    gap: 150px;
+    padding-bottom: 10px;
     background-color: var(--color-white); 
 }
+
 
 .footer-hashtag {
     font-size: 21px;
@@ -824,16 +911,18 @@ fieldset {
 }
 
 .contacts-phone {
+    color: inherit;    
     font-size: 21px;
     font-weight: 700;
     line-height: 10px;
-    text-decoration: none;   
+    text-decoration: none;  
 }
+
 
 .footer-social {
     display: flex;
-    gap: 5px;
-    margin-top: 20px;
+    align-self: center;
+    gap: 5px;    
 }
 
 .footer-copyright {
@@ -841,10 +930,7 @@ fieldset {
     width: 200px;
     height: 41px;
     justify-content: space-between;
-    grid-column-start:10;
-    grid-column-end: 12;  
-    padding-top: 38px;
-    padding-bottom: 35px;
+    margin-top: 38px;  
 }
 
 .social-button img {
