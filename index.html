@@ -26,7 +26,7 @@
   <main>
     <div class="head-image text-center">
       <div class="head-image-photo">
-        <img src="img/background-photo-sedona.jpg" width="1200" height="auto" alt="sedona photo">
+        <img src="img/background-photo-sedona.jpg" width="1200" height="509" alt="sedona photo">
       </div>
       <div class="head-image-welcome">
         <img src="img/welcome.png" width="458" height="352" alt="welcome to the gorgeous Sedona">
@@ -43,7 +43,7 @@
     <section class="advantages text-center">
       <ul class="advantages-list-photo">
         <li class="advantages-blue">
-          <h4 class="like-h4">НАСТОЯЩИЙ ГОРОДОК</h4>
+          <h4 class="like-h4">НАСТОЯЩИЙ <br> ГОРОДОК</h4>
           <p> - №1 - </p>
           <p>СЕДОНА - НЕ АТРАКЦИОН ДЛЯ ТУРИСТОВ, ТАМ<br>
             ТЕЧЁТ СВОЯ ЖИЗНЬ</p>
@@ -77,7 +77,7 @@
           <img class="photo-of-sedona-2" src="img/sedona-canyon.jpg" width="800" height="256" alt="каньон в Седоне">
         </li>
         <li class="advantages-blue">
-          <h4 class="like-h4">ТАМ ЕСТЬ МОСТ ДЬЯВОЛА</h4>
+          <h4 class="like-h4">ТАМ ЕСТЬ <br> МОСТ ДЬЯВОЛА</h4>
           <p> - №2 -</p>
           <p>ДА, ПО НЕМУ МОЖНО ПРОЙТИСЬ, ЕСЛИ КОНЕЧНО<br>
             ВЫ ОСМЕЛИТЕСЬ</p>
@@ -85,22 +85,22 @@
       </ul>
       <ul class="advantages-list-grey">
         <li>
-          <h4 class="like-h4">НЕБОЛЬШАЯ ПЛОЩАДЬ</h4>
+          <h4 class="like-h4">НЕБОЛЬШАЯ <br> ПЛОЩАДЬ</h4>
           <p> - №3 - </p>
           <p>ВСЕ ДОСТОПРИМЕЧАТЕЛЬНОСТИ<br>
             НАХОДЯТСЯ ОЧЕНЬ БЛИЗКО</p>
         </li>
         <li>
-          <h4 class="like-h4">КРАСИВАЯ ДОРОГА</h4>
+          <h4 class="like-h4">КРАСИВАЯ <br> ДОРОГА</h4>
           <p> - №4 -</p>
           <p>ЕХАТЬ В СЕДОНУ ИЗ ЛАС-ВЕГАСА СОВСЕМ<br>
-            И ТОЛПИТСЯ ТАМ</p>
+            не скучно</p>
         </li>
         <li>
-          <h4 class="like-h4">МАЛО ТУРИСТОВ</h4>
+          <h4 class="like-h4">МАЛО <br> ТУРИСТОВ</h4>
           <p> - №5 -</p>
           <p>БОЛЬШИНСТВО ЕДЕТ В ГРАНД КАНЬОН<br>
-            ПРОИЗВОДСТВА</p>
+            и толпится там</p>
         </li>
       </ul>
     </section>
@@ -115,23 +115,23 @@
       </div>
       <section class="appointment text-center">
         <div class="appointment-info like-h2">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</div>
-        <form class="appointment-form">
+        <form class="appointment-form" method="GET" action="https://echo.htmlacademy.ru">
           <div class="appointment-item date-of-arrival">
-            <label for="date">ДАТА ЗАЕЗДА:</label>
-            <input type="date" name="calendar">
+            <label for="date-of-arrival">ДАТА ЗАЕЗДА:</label>
+            <input type="date" name="calendar" id="date-of-arrival">
           </div>
           <div class="appointment-item date-of-departure">
-            <label for="date">ДАТА ВЫЕЗДА:</label>
-            <input type="date" name="calendar">
+            <label for="date-of-departure">ДАТА ВЫЕЗДА:</label>
+            <input type="date" name="calendar" id="date-of-departure">
           </div>
           <div class="number-of-people">
             <div class="appointment-item adults">
-              <label for="number">Взрослые:</label>
-              <input type="number" placeholder="0" name="how many adults" min="0" max="10">
+              <label for="adults">Взрослые:</label>
+              <input type="number" placeholder="0" name="how many adults" min="0" max="10" id="adults">
             </div>
             <div class="appointment-item children">
-              <label for="number">Дети:</label>
-              <input type="number" placeholder="0" name="how many children" min="0" max="10">
+              <label for="children">Дети:</label>
+              <input type="number" placeholder="0" name="how many children" min="0" max="10" id="children">
             </div>
           </div>
           <div class="like-h2 form-button">
@@ -144,7 +144,7 @@
   <footer class="main-footer">
     <div class="footer-phone-hashtag text-center">
       <p class="footer-hashtag">#VISITSEDONA</p>
-      <p><a class="contacts-phone" href="tel:+74956660166">тел:+7(495)666-01-66</a></p>
+      <a class="contacts-phone" href="tel:+74956660166">тел:+7(495)666-01-66</a>
     </div>
     <ul class="footer-social list-style-none">
       <li>
@@ -220,5 +220,4 @@
     </a>
   </footer>
 </body>
-
 </html>
